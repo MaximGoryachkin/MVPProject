@@ -1,0 +1,8 @@
+//
+//  DetailViewController.swift
+//  MVPProject
+//
+//  Created by Максим Горячкин on 23.12.2023.
+//
+
+import Foundation
