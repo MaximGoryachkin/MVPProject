@@ -9,13 +9,14 @@ import UIKit
 
 protocol CollectionViewProtocol {
     func render(_ model: CollectionViewModel)
+    func presentDetailView(_ model: DetailViewModel)
 }
 
-class CollectionViewController: UIViewController {
+final class CollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 

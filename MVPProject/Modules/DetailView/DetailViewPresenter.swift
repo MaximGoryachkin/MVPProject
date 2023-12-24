@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol DetailViewPresenterProtocol {
+    func viewDidLoad()
+}
+
+final class DetailViewPresenter {
+    
+}

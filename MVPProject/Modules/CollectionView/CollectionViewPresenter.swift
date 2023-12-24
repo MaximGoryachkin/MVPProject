@@ -8,9 +8,12 @@
 import Foundation
 
 protocol CollectionPresenterProtocol {
-    
+    func viewDidLoad()
+    func viewWillAppear()
+    func viewDidDisappear()
+    func didSelectItem(at index: Int)
 }
 
-class CollectionViewPresenter {
+final class CollectionViewPresenter {
     
 }

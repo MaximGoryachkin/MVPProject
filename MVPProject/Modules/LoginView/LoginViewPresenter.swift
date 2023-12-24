@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+protocol LoginViewPresenterProtocol {
+    func viewDidLoad()
+    func checkAuthentification()
+}
+
+final class LoginViewPresenter {
+    
+}

@@ -20,6 +20,12 @@
 		895B19382B3747320002AD9B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19372B3747320002AD9B /* DetailViewModel.swift */; };
 		895B193A2B37474C0002AD9B /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19392B37474C0002AD9B /* CollectionViewModel.swift */; };
 		895B193C2B3747660002AD9B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B193B2B3747660002AD9B /* LoginViewModel.swift */; };
+		895B19422B3849560002AD9B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19412B3849560002AD9B /* NetworkManager.swift */; };
+		895B19442B3849AD0002AD9B /* OpenLibraryEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19432B3849AD0002AD9B /* OpenLibraryEndpoints.swift */; };
+		895B19462B384E870002AD9B /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19452B384E870002AD9B /* APIModel.swift */; };
+		895B19492B3857F90002AD9B /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19482B3857F90002AD9B /* CollectionDataSource.swift */; };
+		895B194B2B3858050002AD9B /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B194A2B3858050002AD9B /* CollectionLayout.swift */; };
+		89E75ADB2B38639E00B708E3 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E75ADA2B38639E00B708E3 /* CollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		895B19372B3747320002AD9B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		895B19392B37474C0002AD9B /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		895B193B2B3747660002AD9B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		895B19412B3849560002AD9B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		895B19432B3849AD0002AD9B /* OpenLibraryEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLibraryEndpoints.swift; sourceTree = "<group>"; };
+		895B19452B384E870002AD9B /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
+		895B19482B3857F90002AD9B /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		895B194A2B3858050002AD9B /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
+		89E75ADA2B38639E00B708E3 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		895B192A2B3746750002AD9B /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				895B19472B3857DE0002AD9B /* Helpful */,
 				895B19392B37474C0002AD9B /* CollectionViewModel.swift */,
 				895B19182B37450F0002AD9B /* CollectionViewController.swift */,
 				895B19282B37460A0002AD9B /* CollectionViewPresenter.swift */,
@@ -131,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				895B193F2B3748400002AD9B /* Network */,
+				895B19452B384E870002AD9B /* APIModel.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -148,8 +162,20 @@
 		895B193F2B3748400002AD9B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				895B19412B3849560002AD9B /* NetworkManager.swift */,
+				895B19432B3849AD0002AD9B /* OpenLibraryEndpoints.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		895B19472B3857DE0002AD9B /* Helpful */ = {
+			isa = PBXGroup;
+			children = (
+				895B19482B3857F90002AD9B /* CollectionDataSource.swift */,
+				895B194A2B3858050002AD9B /* CollectionLayout.swift */,
+				89E75ADA2B38639E00B708E3 /* CollectionCell.swift */,
+			);
+			path = Helpful;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,17 +248,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895B19462B384E870002AD9B /* APIModel.swift in Sources */,
+				895B19422B3849560002AD9B /* NetworkManager.swift in Sources */,
 				895B19192B37450F0002AD9B /* CollectionViewController.swift in Sources */,
 				895B19292B37460A0002AD9B /* CollectionViewPresenter.swift in Sources */,
 				895B193C2B3747660002AD9B /* LoginViewModel.swift in Sources */,
 				895B19362B37471D0002AD9B /* DetailViewPresenter.swift in Sources */,
 				895B19382B3747320002AD9B /* DetailViewModel.swift in Sources */,
 				895B193A2B37474C0002AD9B /* CollectionViewModel.swift in Sources */,
+				895B19442B3849AD0002AD9B /* OpenLibraryEndpoints.swift in Sources */,
 				895B19152B37450F0002AD9B /* AppDelegate.swift in Sources */,
 				895B192E2B37469C0002AD9B /* LoginViewPresenter.swift in Sources */,
+				89E75ADB2B38639E00B708E3 /* CollectionCell.swift in Sources */,
+				895B194B2B3858050002AD9B /* CollectionLayout.swift in Sources */,
 				895B192C2B3746920002AD9B /* LoginViewController.swift in Sources */,
 				895B19172B37450F0002AD9B /* SceneDelegate.swift in Sources */,
 				895B19342B3747100002AD9B /* DetailViewController.swift in Sources */,
+				895B19492B3857F90002AD9B /* CollectionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,6 @@
 
 import Foundation
 
-class CollectionViewModel {
+struct CollectionViewModel: Hashable {
     
 }
