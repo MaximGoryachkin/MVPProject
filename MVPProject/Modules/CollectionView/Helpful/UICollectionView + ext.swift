@@ -10,7 +10,7 @@ import UIKit.UICollectionView
 extension UICollectionView {
     static func createCollectionView(with layout: UICollectionViewLayout) -> UICollectionView {
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.backgroundColor = .red
+        view.backgroundColor = .systemBackground
         view.showsVerticalScrollIndicator = false
         return view
     }

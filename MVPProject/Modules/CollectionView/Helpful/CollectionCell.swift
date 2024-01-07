@@ -12,13 +12,14 @@ class CollectionCell: UICollectionViewCell {
     
     let imageView: UIImageView = {
         let view = UIImageView()
-        view.image = .checkmark
+        view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     let label: UILabel = {
         let view = UILabel()
+        view.numberOfLines = 2
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -59,8 +60,24 @@ class CollectionCell: UICollectionViewCell {
     }
     
     func configure(_ picture: PictureModel) {
-        label.text = "picture.name"
-        dateLabel.text = "picture.date"
+        label.text = picture.name
+        dateLabel.text = picture.date
+        
+        if let url = NSURL(string: picture.url) {
+            Task.detached(priority: .high) {
+                do {
+                    let image = try await NetworkManager.shared.loadImage(nsurl: url)
+                    print(image)
+                    await MainActor.run {
+                        self.imageView.image = image
+                    }
+                } catch {
+                    await MainActor.run {
+                        self.imageView.image = .strokedCheckmark
+                    }
+                }
+            }
+        }
     }
     
 }

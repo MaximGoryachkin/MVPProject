@@ -11,6 +11,7 @@ import SwiftUI
 protocol CollectionViewProtocol: AnyObject {
     func render(_ model: CollectionViewModel)
     func presentDetailView(_ model: DetailViewModel)
+    func showError(_ error: String)
 }
 
 final class CollectionViewController: UIViewController {
@@ -44,12 +45,17 @@ final class CollectionViewController: UIViewController {
 }
 
 extension CollectionViewController: CollectionViewProtocol {
+    
     func render(_ model: CollectionViewModel) {
         dataSource.update(with: model.pictures)
     }
     
     func presentDetailView(_ model: DetailViewModel) {
         
+    }
+    
+    func showError(_ error: String) {
+        print(error)
     }
 }
 

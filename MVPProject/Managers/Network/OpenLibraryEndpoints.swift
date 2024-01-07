@@ -45,7 +45,8 @@ struct OpenLibraryEndpoints {
     static func home(limit: Int = 30) -> Self {
         .init(queryItems: [
             .init(name: "api_key", value: "7TXq0HA9eS3awwPE45A8Ed3UPNz4ERkBGkB0O76z"),
-            .init(name: "count", value: limit.description)
+            .init(name: "count", value: limit.description),
+            .init(name: "thumbs", value: "true")
         ])
     }
     

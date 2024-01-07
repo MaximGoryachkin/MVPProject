@@ -5,7 +5,7 @@
 //  Created by Максим Горячкин on 23.12.2023.
 //
 
-import Foundation
+import UIKit
 
 protocol CollectionPresenterProtocol {
     func viewDidLoad()
@@ -16,24 +16,11 @@ protocol CollectionPresenterProtocol {
 
 final class CollectionViewPresenter: CollectionPresenterProtocol {
     weak var view: CollectionViewController?
-    
-    let pictures = [
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: ""),
-        PictureModel(name: "fisrt", date: "01.01.23", url: "")
-    ]
+    private let networking = NetworkManager.shared
+    private var pictures: [PictureModel] = []
     
     func viewDidLoad() {
-        view?.render(
-            .init(pictures: pictures)
-        )
+        fetchData()
     }
     
     func viewWillAppear() {
@@ -46,5 +33,31 @@ final class CollectionViewPresenter: CollectionPresenterProtocol {
     
     func didSelectItem(at index: Int) {
         
+    }
+    
+    private func fetchData() {
+        Task.detached { [unowned self] in
+            do {
+                async let model: [APIModel] = try networking.fetchAsyncData(from: .home())
+                let pictures: [PictureModel] = try await model.map(toPicture(_:))
+                self.pictures = pictures
+                print(pictures)
+                await MainActor.run {
+                    self.view?.render(
+                        .init(pictures: self.pictures)
+                    )
+                }
+            } catch {
+                await MainActor.run {
+                    self.view?.showError(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
+    private func toPicture(_ model: APIModel) -> PictureModel {
+        .init(name: model.title,
+              date: model.date,
+              url: model.url)
     }
 }

@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct APIPhoto: Identifiable {
-    let id = UUID()
+struct APIModel: Decodable {
     let copyright: String?
     let date: String
     let explanation: String
-    let hdurl: String
+    let hdurl: String?
     let title: String
     let url: String
 }
