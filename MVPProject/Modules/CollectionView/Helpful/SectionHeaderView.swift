@@ -33,7 +33,6 @@ class SectionHeaderView: UICollectionReusableView {
         super.init(frame: frame)
         addSubview(maintitle)
         addSubview(button)
-        disableChildrenTAMIC()
         setupConstraints()
     }
     

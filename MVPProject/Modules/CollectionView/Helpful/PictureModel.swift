@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct PictureModel: Hashable {
+struct PictureModel: Identifiable, Hashable {
+    let id = UUID()
     let name: String
+    let date: String
     let url: String
 }

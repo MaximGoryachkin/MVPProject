@@ -21,19 +21,17 @@ extension UICollectionViewLayout {
     }()
     
     private static func createMainSectionLayout() -> NSCollectionLayoutSection {
-        let estimatedHeight: CGFloat = 32
-        let estimatedWidth: CGFloat = 86
+        let absoluteHeight: CGFloat = 90
         let spacing: CGFloat = 8
         let inset: CGFloat = 12
         
-        let size = NSCollectionLayoutSize(widthDimension: .estimated(estimatedWidth),
-                                          heightDimension: .estimated(estimatedHeight))
+        let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                          heightDimension: .absolute(absoluteHeight))
         let item = NSCollectionLayoutItem(layoutSize: size)
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: size,
                                                        subitems: [item])
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = spacing
-        section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
         
 //        let header = createHeader()

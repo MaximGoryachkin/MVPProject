@@ -22,7 +22,7 @@ final class CollectionDataSource {
             switch item {
             case .main(let model):
                 let cell = cell as? CollectionCell
-                //                cell?.configure(with: category)
+                cell?.configure(model)
                 
                 return cell
             }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct CollectionViewModel {
-    let topBooksHeader: Header
+//    let topBooksHeader: Header
     let pictures: [PictureModel]
     
     struct Header {

@@ -29,6 +29,7 @@
 		89E8DEF62B4AE4C40032CCD0 /* UICollectionView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8DEF52B4AE4C40032CCD0 /* UICollectionView + ext.swift */; };
 		89E8DEF82B4AEEAE0032CCD0 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8DEF72B4AEEAE0032CCD0 /* SectionHeaderView.swift */; };
 		89E8DEFA2B4AEF820032CCD0 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8DEF92B4AEF820032CCD0 /* PictureModel.swift */; };
+		89E8DEFC2B4AF8570032CCD0 /* UIViewController + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8DEFB2B4AF8570032CCD0 /* UIViewController + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		89E8DEF52B4AE4C40032CCD0 /* UICollectionView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView + ext.swift"; sourceTree = "<group>"; };
 		89E8DEF72B4AEEAE0032CCD0 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		89E8DEF92B4AEF820032CCD0 /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
+		89E8DEFB2B4AF8570032CCD0 /* UIViewController + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				89E75ADA2B38639E00B708E3 /* CollectionCell.swift */,
 				89E8DEF72B4AEEAE0032CCD0 /* SectionHeaderView.swift */,
 				89E8DEF92B4AEF820032CCD0 /* PictureModel.swift */,
+				89E8DEFB2B4AF8570032CCD0 /* UIViewController + ext.swift */,
 			);
 			path = Helpful;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				89E75ADB2B38639E00B708E3 /* CollectionCell.swift in Sources */,
 				895B194B2B3858050002AD9B /* UICollectionViewLayout + ext.swift in Sources */,
 				895B192C2B3746920002AD9B /* LoginViewController.swift in Sources */,
+				89E8DEFC2B4AF8570032CCD0 /* UIViewController + ext.swift in Sources */,
 				895B19172B37450F0002AD9B /* SceneDelegate.swift in Sources */,
 				895B19342B3747100002AD9B /* DetailViewController.swift in Sources */,
 				89E8DEFA2B4AEF820032CCD0 /* PictureModel.swift in Sources */,
