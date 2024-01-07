@@ -7,6 +7,17 @@
 
 import Foundation
 
-struct CollectionViewModel: Hashable {
+struct CollectionViewModel {
+    let topBooksHeader: Header
+    let pictures: [PictureModel]
     
+    struct Header {
+        let title: String
+        let button: Button
+    }
+    
+    struct Button {
+        let title: String
+        let action: () -> Void
+    }
 }

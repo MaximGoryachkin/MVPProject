@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum Section: Int, Hashable, CaseIterable {
+    case main
+}
+
 struct LoginViewModel {
     
 }
