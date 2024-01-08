@@ -32,7 +32,7 @@ final class CollectionViewPresenter: CollectionPresenterProtocol {
     }
     
     func didSelectItem(at index: Int) {
-        
+        view?.presentDetailView(pictures[index])
     }
     
     private func fetchData() {
@@ -58,6 +58,8 @@ final class CollectionViewPresenter: CollectionPresenterProtocol {
     private func toPicture(_ model: APIModel) -> PictureModel {
         .init(name: model.title,
               date: model.date,
-              url: model.url)
+              url: model.url,
+              description: model.explanation
+        )
     }
 }

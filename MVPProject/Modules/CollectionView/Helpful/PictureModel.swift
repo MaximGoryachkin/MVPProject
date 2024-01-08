@@ -12,4 +12,5 @@ struct PictureModel: Identifiable, Hashable {
     let name: String
     let date: String
     let url: String
+    let description: String
 }

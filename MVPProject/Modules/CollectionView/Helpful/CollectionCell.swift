@@ -67,7 +67,6 @@ class CollectionCell: UICollectionViewCell {
             Task.detached(priority: .high) {
                 do {
                     let image = try await NetworkManager.shared.loadImage(nsurl: url)
-                    print(image)
                     await MainActor.run {
                         self.imageView.image = image
                     }

@@ -10,7 +10,7 @@ import SwiftUI
 
 protocol CollectionViewProtocol: AnyObject {
     func render(_ model: CollectionViewModel)
-    func presentDetailView(_ model: DetailViewModel)
+    func presentDetailView(_ model: PictureModel)
     func showError(_ error: String)
 }
 
@@ -19,6 +19,7 @@ final class CollectionViewController: UIViewController {
     let presenter: CollectionViewPresenter
     let collectionView: UICollectionView = .createCollectionView(with: .mainLayout)
     private lazy var dataSource = CollectionDataSource(collectionView)
+    private lazy var delegate = BooksCollectionDelegate(collectionView)
     
     init(presenter: CollectionViewPresenter) {
         self.presenter = presenter
@@ -38,10 +39,13 @@ final class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        setupCollectionDelegate()
         print(OpenLibraryEndpoints.home().request())
     }
     
-    
+    private func setupCollectionDelegate() {
+        delegate.didSelectItemAt = presenter.didSelectItem(at:)
+    }
 }
 
 extension CollectionViewController: CollectionViewProtocol {
@@ -50,8 +54,9 @@ extension CollectionViewController: CollectionViewProtocol {
         dataSource.update(with: model.pictures)
     }
     
-    func presentDetailView(_ model: DetailViewModel) {
-        
+    func presentDetailView(_ model: PictureModel) {
+        let detailVC: UIViewController = .buildDetailVC(with: model)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func showError(_ error: String) {

@@ -8,5 +8,8 @@
 import Foundation
 
 struct DetailViewModel {
-    
+    let image: String
+    let title: String
+    let date: String
+    let descripption: String
 }

@@ -25,6 +25,8 @@
 		895B19462B384E870002AD9B /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19452B384E870002AD9B /* APIModel.swift */; };
 		895B19492B3857F90002AD9B /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B19482B3857F90002AD9B /* CollectionDataSource.swift */; };
 		895B194B2B3858050002AD9B /* UICollectionViewLayout + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B194A2B3858050002AD9B /* UICollectionViewLayout + ext.swift */; };
+		8961811E2B4BF4410066AEE7 /* CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8961811D2B4BF4410066AEE7 /* CollectionDelegate.swift */; };
+		896181212B4BF6C20066AEE7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896181202B4BF6C20066AEE7 /* DetailView.swift */; };
 		89E75ADB2B38639E00B708E3 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E75ADA2B38639E00B708E3 /* CollectionCell.swift */; };
 		89E8DEF62B4AE4C40032CCD0 /* UICollectionView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8DEF52B4AE4C40032CCD0 /* UICollectionView + ext.swift */; };
 		89E8DEF82B4AEEAE0032CCD0 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E8DEF72B4AEEAE0032CCD0 /* SectionHeaderView.swift */; };
@@ -53,6 +55,8 @@
 		895B19452B384E870002AD9B /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		895B19482B3857F90002AD9B /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
 		895B194A2B3858050002AD9B /* UICollectionViewLayout + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout + ext.swift"; sourceTree = "<group>"; };
+		8961811D2B4BF4410066AEE7 /* CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDelegate.swift; sourceTree = "<group>"; };
+		896181202B4BF6C20066AEE7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		89E75ADA2B38639E00B708E3 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		89E8DEF52B4AE4C40032CCD0 /* UICollectionView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView + ext.swift"; sourceTree = "<group>"; };
 		89E8DEF72B4AEEAE0032CCD0 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		895B19322B3746FC0002AD9B /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				8961811F2B4BF6B80066AEE7 /* Helpful */,
 				895B19372B3747320002AD9B /* DetailViewModel.swift */,
 				895B19332B3747100002AD9B /* DetailViewController.swift */,
 				895B19352B37471D0002AD9B /* DetailViewPresenter.swift */,
@@ -186,6 +191,15 @@
 				89E8DEF72B4AEEAE0032CCD0 /* SectionHeaderView.swift */,
 				89E8DEF92B4AEF820032CCD0 /* PictureModel.swift */,
 				89E8DEFB2B4AF8570032CCD0 /* UIViewController + ext.swift */,
+				8961811D2B4BF4410066AEE7 /* CollectionDelegate.swift */,
+			);
+			path = Helpful;
+			sourceTree = "<group>";
+		};
+		8961811F2B4BF6B80066AEE7 /* Helpful */ = {
+			isa = PBXGroup;
+			children = (
+				896181202B4BF6C20066AEE7 /* DetailView.swift */,
 			);
 			path = Helpful;
 			sourceTree = "<group>";
@@ -262,6 +276,7 @@
 			files = (
 				895B19462B384E870002AD9B /* APIModel.swift in Sources */,
 				895B19422B3849560002AD9B /* NetworkManager.swift in Sources */,
+				8961811E2B4BF4410066AEE7 /* CollectionDelegate.swift in Sources */,
 				895B19192B37450F0002AD9B /* CollectionViewController.swift in Sources */,
 				895B19292B37460A0002AD9B /* CollectionViewPresenter.swift in Sources */,
 				895B193C2B3747660002AD9B /* LoginViewModel.swift in Sources */,
@@ -276,6 +291,7 @@
 				89E75ADB2B38639E00B708E3 /* CollectionCell.swift in Sources */,
 				895B194B2B3858050002AD9B /* UICollectionViewLayout + ext.swift in Sources */,
 				895B192C2B3746920002AD9B /* LoginViewController.swift in Sources */,
+				896181212B4BF6C20066AEE7 /* DetailView.swift in Sources */,
 				89E8DEFC2B4AF8570032CCD0 /* UIViewController + ext.swift in Sources */,
 				895B19172B37450F0002AD9B /* SceneDelegate.swift in Sources */,
 				895B19342B3747100002AD9B /* DetailViewController.swift in Sources */,
