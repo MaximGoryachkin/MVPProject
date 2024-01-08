@@ -20,12 +20,14 @@ class CollectionCell: UICollectionViewCell {
     let label: UILabel = {
         let view = UILabel()
         view.numberOfLines = 2
+        view.font = .systemFont(ofSize: 20, weight: .regular)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     let dateLabel: UILabel = {
         let view = UILabel()
+        view.font = .systemFont(ofSize: 14, weight: .bold)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -49,12 +51,12 @@ class CollectionCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.widthAnchor.constraint(equalToConstant: contentView.frame.height),
             
-            label.topAnchor.constraint(equalTo: contentView.topAnchor),
-            label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: contentView.bounds.height / 10),
+            label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: contentView.bounds.height / 10),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
-            dateLabel.topAnchor.constraint(equalTo: label.bottomAnchor),
-            dateLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor),
+            dateLabel.topAnchor.constraint(equalTo: label.bottomAnchor, constant: contentView.bounds.height / 10),
+            dateLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: contentView.bounds.height / 10),
             dateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         ])
     }

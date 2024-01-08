@@ -21,7 +21,7 @@ extension UICollectionViewLayout {
     }()
     
     private static func createMainSectionLayout() -> NSCollectionLayoutSection {
-        let absoluteHeight: CGFloat = 90
+        let absoluteHeight: CGFloat = 100
         let spacing: CGFloat = 8
         let inset: CGFloat = 12
         

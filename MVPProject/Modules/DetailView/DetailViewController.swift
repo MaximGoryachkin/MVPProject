@@ -33,6 +33,10 @@ final class DetailViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    
+    override func viewDidLayoutSubviews() {
+        view.layoutIfNeeded()
+    }
 }
 
 extension DetailViewController: DetailViewProtocol {
